@@ -1,0 +1,101 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.shoe-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  width: 450px;
+  border-radius: 25px;
+  /*border-color: rgb(83, 83, 83);
+  border-width: 5px;
+  border-style: solid;*/
+  text-align: center;
+  padding-top: 60px;
+  background-color: white;
+  gap: 0;
+  transition: all 0.5s ease;
+  /*box-shadow: 0px 0px 10px 20px rgb(255, 255, 255);*/
+}
+
+.shoe-card.open {
+  padding-top: 0px;
+}
+
+.shoe-card .shoe-name {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.shoe-card img {
+  width: 400px;
+  object-fit: contain;
+}
+
+.shoe-card p {
+  font-family: "Poppins", sans-serif;
+}
+
+.shoe-card.open .shoe-price {
+  font-size: 48px;
+  font-weight: 800;
+  display: block;
+}
+
+.shoe-card .shoe-price {
+  display: none;
+  color: black;
+}
+
+.shoe-card i {
+  top: -1px;
+  opacity: 0.75;
+  font-size: 62px;
+  transition: all 0.75s ease;
+  box-sizing: border-box;
+}
+
+.shoe-card i::before {
+  padding: 0px;
+}
+
+.shoe-card i:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+.dollar {
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.up-button {
+  color: rgb(0, 90, 0);
+}
+
+.down-button {
+  color: rgb(139, 0, 0);
+}
+
+.shoe-card .buttons {
+  position: relative;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /*background-color: rgba(119, 136, 153, 0.5);
+  border-radius: 45px;
+  padding: 5px 20px;*/
+}
+
+.shoe-card.open .buttons {
+  display: none;
+}
