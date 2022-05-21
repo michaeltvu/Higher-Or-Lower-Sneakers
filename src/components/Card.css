@@ -16,7 +16,6 @@
   padding-top: 60px;
   background-color: white;
   gap: 0;
-  transition: all 0.5s ease;
   /*box-shadow: 0px 0px 10px 20px rgb(255, 255, 255);*/
 }
 
@@ -40,13 +39,15 @@
 
 .shoe-card.open .shoe-price {
   font-size: 48px;
-  font-weight: 800;
+  opacity: 100%;
   display: block;
 }
 
 .shoe-card .shoe-price {
   display: none;
+  font-weight: 800;
   color: black;
+  transition: all 1s ease;
 }
 
 .shoe-card i {

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Card.css"
 
-function Card({shoe, preshoe, open, id, score, status}) {
-    const [guessed, setGuessed] = useState('false');
+function Card({shoe, preshoe, open, id, correct, incorrect}) {
     useEffect(() => {
-        console.log('test');
     }, []);
 
     const enterUp = () => {
@@ -33,28 +31,42 @@ function Card({shoe, preshoe, open, id, score, status}) {
 
     const guessHigher = () => {
         const card = document.getElementsByClassName("shoe-card " + id)[0];
+        const price = document.getElementsByClassName('shoe-price ' + id)[0];
         if (shoe.shoePrice >= preshoe.shoePrice) {
             console.log('CORRECT');
-            score();
+            price.style.color = 'rgb(0, 90, 0)';
+            price.style.fontSize = '100px';
+            correct();
+            setTimeout(() => {
+                price.style.fontSize = '48px';
+            }, 1000)
         }
         else {
             console.log('INCORRECT');
+            price.style.color = 'rgb(139, 0, 0)';
+            incorrect();
         }
         card.classList.toggle('open');
-        //setGuessed(!open);
     };
 
     const guessLower = () => {
         const card = document.getElementsByClassName("shoe-card " + id)[0];
+        const price = document.getElementsByClassName('shoe-price ' + id)[0];
         if (shoe.shoePrice <= preshoe.shoePrice) {
             console.log('CORRECT');
-            score();
+            price.style.color = 'rgb(0, 90, 0)';
+            price.style.fontSize = '100px';
+            correct();
+            setTimeout(() => {
+                price.style.fontSize = '48px';
+            }, 1000)
         }
         else {
             console.log('INCORRECT');
+            price.style.color = 'rgb(139, 0, 0)';
+            incorrect();
         }
         card.classList.toggle('open');
-        setGuessed(!open);
     };
 
     return(
