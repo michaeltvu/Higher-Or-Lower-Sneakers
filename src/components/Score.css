@@ -3,17 +3,18 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 50px 50px;
-    background-color: rgb(56, 56, 56);
-    border-radius: 20px;
+    padding: 4rem 5rem;
+    background-color: white;
+    border-radius: 0.75rem;
     z-index: 9;
     position: absolute;
     top: 25%;
     display: none;
     opacity: 0%;
-    box-shadow: 20px 20px 50px #474747, 
-            -30px -30px 60px #686868;
-    animation: fadein 1s;
+    box-shadow: 25px 25px 50px #bebebe, 
+            -20px -20px 60px #ffffff;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
 }
 
 .Score.show {
@@ -22,66 +23,51 @@
 }
 
 .Score p {
-    color: white;
-    font-size: 32px;
-    font-weight: 500;
+    color: rgb(56, 56, 56);
+    font-size: 2.5rem;
+    font-weight: 600;
     margin: 0;
+    z-index: 2;
 }
 
-p.gameover {
-    font-size: 48px;
-    font-weight: 900;
-    padding-bottom: 30px;
+.Score .logo {
+    position: absolute;
+    height: 10rem;
+    bottom: 8.5rem;
+    opacity: 30%;
+    z-index: 0;
 }
 
 .Score .highscore {
-    margin-bottom: 150px;
+    margin-bottom: 6.25rem;
 }
 
-.Score button {
-    text-decoration: none;
-    background-color: white;
-}
-
-.Score #share-btn {
-    position: absolute;
-    bottom: 30%;
-    color: white;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 5px 10px;
-    color: rgb(80, 80, 80);
-    background-color: white;
-    border-color: white;
+.Score .playagain-btn {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
     transition: all 0.5s ease;
+    -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
 }
 
-.Score #share-btn:hover {
-    color: black;
-    /* padding: 10px 20px; */
-    font-size: 20px;
+.Score .playagain-btn:hover {
+    cursor: pointer;
+    transform: scale(1.15);
 }
 
-.Score .bi-share-fill, .bi-arrow-clockwise {
-    padding-left: 10px;
+.Score .playagain-btn .bi {
+    font-size: 3.5rem;
 }
 
-.Score #playagain-btn {
-    position: absolute;
-    bottom: 10%;
-    padding: 15px;
-    font-weight: 900;
-    font-size: 26px;
-    color: rgb(80, 80, 80);
-    background-color: white;
-    border-color: white;
-    transition: all 0.5s ease;
-}
-
-.Score #playagain-btn:hover {
-    color: black;
-    /* padding: 20px; */
-    font-size: 30px;
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
 }
 
 @keyframes fadein {

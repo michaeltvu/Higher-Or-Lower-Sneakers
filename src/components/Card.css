@@ -6,17 +6,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 600px;
-  width: 450px;
-  border-radius: 25px;
-  /*border-color: rgb(83, 83, 83);
-  border-width: 5px;
-  border-style: solid;*/
+  height: 37.5rem;
+  width: 28rem;
+  border-radius: 1.5rem;
   text-align: center;
-  padding-top: 60px;
+  padding-top: 3.75rem;
   background-color: white;
   gap: 0;
-  /*box-shadow: 0px 0px 10px 20px rgb(255, 255, 255);*/
 }
 
 .shoe-card.open {
@@ -24,12 +20,13 @@
 }
 
 .shoe-card .shoe-name {
-  font-size: 24px;
+    padding: 0px 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 .shoe-card img {
-  width: 400px;
+  width: 25rem;
   object-fit: contain;
 }
 
@@ -38,7 +35,7 @@
 }
 
 .shoe-card.open .shoe-price {
-  font-size: 48px;
+  font-size: 3rem;
   opacity: 100%;
   display: block;
 }
@@ -51,15 +48,10 @@
 }
 
 .shoe-card i {
-  top: -1px;
   opacity: 0.75;
-  font-size: 62px;
+  font-size: 3.75rem;
   transition: all 0.75s ease;
   box-sizing: border-box;
-}
-
-.shoe-card i::before {
-  padding: 0px;
 }
 
 .shoe-card i:hover {
@@ -69,7 +61,7 @@
 }
 
 .dollar {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   color: black;
   opacity: 1;
@@ -87,14 +79,11 @@
 
 .shoe-card .buttons {
   position: relative;
-  bottom: 30px;
+  bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /*background-color: rgba(119, 136, 153, 0.5);
-  border-radius: 45px;
-  padding: 5px 20px;*/
 }
 
 .shoe-card.open .buttons {

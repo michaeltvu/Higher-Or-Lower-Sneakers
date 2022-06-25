@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Card.css"
 
 function Card({shoe, preshoe, open, id, correct, incorrect}) {
+
     useEffect(() => {
-    }, []);
+        console.log(id + " "  + open);
+    });
 
     const enterUp = () => {
         const upBtn = document.getElementsByClassName("up-button " + id)[0];
@@ -46,6 +48,7 @@ function Card({shoe, preshoe, open, id, correct, incorrect}) {
             price.style.color = 'rgb(139, 0, 0)';
             incorrect();
         }
+        console.log('opened');
         card.classList.toggle('open');
     };
 
@@ -66,13 +69,14 @@ function Card({shoe, preshoe, open, id, correct, incorrect}) {
             price.style.color = 'rgb(139, 0, 0)';
             incorrect();
         }
+        console.log('opened');
         card.classList.toggle('open');
     };
 
     return(
         <div className={"shoe-card " + id + (open ? " open" : "")}>
             <p className={"shoe-name " + id}>{shoe.shoeName}</p>
-            <img src={shoe.shoeImg} alt="shoepic"></img>
+            <img src={shoe.shoeImg} alt={shoe.shoeName + "Image"}></img>
             <p className={"shoe-price " + id}>${shoe.shoePrice}</p>
             <div className="buttons">
                 <i className={id + " up-button bi-arrow-up-circle"}

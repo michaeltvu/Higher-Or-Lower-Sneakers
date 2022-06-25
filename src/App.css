@@ -5,12 +5,27 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-  background-color: rgb(248, 248, 248);
+  background-color: rgb(255, 255, 255);
   height: 100vh;
   width: 100vw;
-  gap: 15px;
-  padding: 25px;
+  gap: 1rem;
+  padding: 1.5rem;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.main-game {
+    opacity: 0%;
+    position: absolute;
+    top: 2rem;
+    z-index: 0;
+    transition: all 1s;
+}
+
+.main-game.played {
+    opacity: 100%;
+    z-index: 5;
+    transition: all 1s;
 }
 
 h1, h3 {
@@ -20,7 +35,8 @@ h1, h3 {
 }
 
 #score {
-  font-size: 54px;
+  font-size: 3.3rem;
+  z-index: 99;
 }
 
 h2 {
@@ -35,16 +51,17 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px;
+  gap: 6.25rem;
+  padding-top: 2.5rem;
 }
 
 section {
   position: relative;
   left: 0;
   transition: none;
-  box-shadow: 20px 20px 50px #dadada, 
-            -30px -30px 60px #ffffff;
-  border-radius: 20px;
+  box-shadow: 25px 25px 50px #bebebe, 
+            -20px -20px 60px #ffffff;
+  border-radius: 1.5rem;
 }
 
 .phase2 {
@@ -84,20 +101,3 @@ section {
   filter: blur(2px);
   transition: all 1 ease;
 }
-
-/*.background {
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  height: 1vh;
-  width: 1vw;
-  background-color: rgb(233, 233, 233);
-  transition: all 0.5s ease;
-  z-index: 2;
-}
-
-.background.blurred {
-  opacity: 20%;
-  height: 200vh;
-  width: 200vw;
-}*/

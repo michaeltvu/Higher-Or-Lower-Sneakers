@@ -1,0 +1,89 @@
+.MainMenu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+    user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    z-index: 3;
+}
+
+.MainMenu .logo {
+    height: 17.5rem;
+    animation-name: floatinglogo;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+    transition: all 2s ease;
+    left: 35%;
+    top: 25%;
+
+}
+
+.MainMenu .logo.played {
+    position: absolute;
+    height: 5rem;
+    left: 0%;
+    top: 0%;
+    margin: 1rem 1.5rem;
+    opacity: 50%;
+    animation-name: none;
+}
+
+.MainMenu .logo.played:hover {
+    cursor: pointer;
+    opacity: 100%;
+    transition: all 0.5s ease;
+    transform: scale(1.25);
+}
+
+.MainMenu .play-button {
+    display: flex;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 0;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+    opacity: 50%;
+}
+
+.MainMenu .play-button.played {
+    opacity: 0;
+    height: 0;
+}
+
+.MainMenu .play-button .bi {
+    font-size: 6rem;
+}
+
+.MainMenu .play-button:hover {
+    cursor: pointer;
+    opacity: 100%;
+}
+ 
+@keyframes floatinglogo {
+    0% { transform: scale(1); }
+    50%  { transform: scale(1.01); }
+    100%   { transform: scale(1); }   
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
