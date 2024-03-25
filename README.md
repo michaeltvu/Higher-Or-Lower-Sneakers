@@ -5,9 +5,3 @@ The [Higher Lower Sneakers App](https://higherlowersneakers.web.app/), created w
 ## Demo
 
 ![Demo](./src/assets/demo.gif)
-
-## Screenshots
-
-![Screenshot1](./src/assets/screenshot1.JPG)
-![Screenshot2](./src/assets/screenshot2.JPG)
-![Screenshot3](./src/assets/screenshot3.JPG)
